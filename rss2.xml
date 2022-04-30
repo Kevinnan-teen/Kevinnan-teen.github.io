@@ -15,8 +15,34 @@
     <atom:link href="https://www.nachr.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 30 Apr 2022 05:22:04 GMT</pubDate>
+    <pubDate>Sat, 30 Apr 2022 08:40:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hexo 搭建静态页面博客</title>
+      <link>https://www.nachr.top/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/</link>
+      <guid>https://www.nachr.top/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/</guid>
+      <pubDate>Sat, 30 Apr 2022 08:39:49 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h4 id=&quot;安装前提&quot;&gt;&lt;a href=&quot;#安装前提&quot; class=&quot;headerlink&quot; title=&quot;安装前提&quot;&gt;&lt;/a&gt;安装前提&lt;/h4&gt;&lt;p&gt;Nodejs、Git&lt;/p&gt;
+&lt;h4 id=&quot;全局安装-Hexo&quot;&gt;&lt;a href=&quot;#全局安装-Hexo&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://www.nachr.top/tags/dev-tool/">dev-tool</category>
+      
+      
+      <comments>https://www.nachr.top/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Hello World</title>

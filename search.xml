@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>hexo 搭建静态页面博客</title>
+      <link href="/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<h4 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h4><p>Nodejs、Git</p><h4 id="全局安装-Hexo"><a href="#全局安装-Hexo" class="headerlink" title="全局安装 Hexo"></a>全局安装 Hexo</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure><h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><p>安装 Hexo 完成后，执行以下命令，Hexo 会在指定文件夹中新建所需文件。每个 Gihub 账户只能有一个<code>username.github.io</code>，所以生成普通的 Gihub Pages 没必要命名为 <code>username.github.io</code>，可以命名为<code>my-blog</code>、<code>my-resume</code>。但如果你要把自己的域名绑定到此 Github Pages 作为你的个人博客主链接，那这个仓库必须要命名为<code>username.github.io</code>，否则自定义域名解析不成功。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo init username.github.io</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> username.github.io</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install</span></span><br></pre></td></tr></table></figure><p>新建完成后，目录下会生成一些特定文件，比较重要的有：</p><ul><li>_config.yml：网站配置信息；</li><li>package.json：nodejs 依赖包</li><li>source：存放博客静态资源，_posts 存放博客文章，之后使用 hexo 生成的页面也会存放在 source 目录下。</li><li>themes：主题文件夹，Hexo 会根据主题来生成静态页面。</li></ul><h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><p>我自己的 Hexo 博客使用的主题是<a href="https://github.com/probberechts/hexo-theme-cactus">hexo-theme-cactus</a>，主题配置文档很详细，不再重复，多看 README 即可。</p><h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>在Gihub新建与项目名称相同的仓库，编辑根目录下配置文件<code>_config.yml</code>，使用 Git 部署，仓库链接建议设置为 SSH，避免频繁输入 username 和 password。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>执行 hexo 命令，部署到 GitHub。Github Pages 的渲染相较 commit 有延迟，第一次提交需要 10 mins，之后 commit  1 min 左右即可重新生成。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo clean<span class="comment"># 清理缓存文件和已经生成的静态文件，建议每次提交之前都执行 clean</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo g<span class="comment"># 生成静态文件</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo d<span class="comment"># 部署到 Github</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo s<span class="comment"># 可在本地查看效果</span></span></span><br></pre></td></tr></table></figure><h4 id="个人域名绑定到-Gihub-Page"><a href="#个人域名绑定到-Gihub-Page" class="headerlink" title="个人域名绑定到 Gihub Page"></a>个人域名绑定到 Gihub Page</h4><p>Gihub Page 设置的自定义域名必须包含<code>www</code>，并且必须强制 HTTPS。否则你可能会遇到以下问题。</p><img src="https://miro.medium.com/max/1400/1*hFkIJlb6vu-qAe9npqaTlw.png"  /><p>因此，你需要将你申请的个人域名进行解析，<strong>解析主机记录为 www 域名的 CNAME 记录到你的 Github 二级域名</strong>。</p><p><img src="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/image-20220430163448356.png"></p><p><img src="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/image-20220430163548492.png" alt="image-20220430163548492"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> dev-tool </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/04/30/hello-world/"/>
       <url>/2022/04/30/hello-world/</url>
