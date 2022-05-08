@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html lang=en>
 <head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="我的 vim 配置 1、前言vim 是什么？是一个编辑器，是一个可以即开即用的编辑器，一个你可以通过配置客制化属于你自己的编辑器。如果你的日常工作主要和 IDE 打交道，你需要一键导入所有配置的功能、你需要一键运行工程、你需要内置的 Debug，那么 vim 不适合你。那 vscode 呢？最近几年爆火的插件式代码编辑器，即便你不安装插件，vscode 本身也提供了最够强大的功能：代码提示、代码高">
-<meta property="og:type" content="article">
-<meta property="og:title" content="你真的会用vim吗">
-<meta property="og:url" content="https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/index.html">
-<meta property="og:site_name" content="Nachr">
-<meta property="og:description" content="我的 vim 配置 1、前言vim 是什么？是一个编辑器，是一个可以即开即用的编辑器，一个你可以通过配置客制化属于你自己的编辑器。如果你的日常工作主要和 IDE 打交道，你需要一键导入所有配置的功能、你需要一键运行工程、你需要内置的 Debug，那么 vim 不适合你。那 vscode 呢？最近几年爆火的插件式代码编辑器，即便你不安装插件，vscode 本身也提供了最够强大的功能：代码提示、代码高">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/nerdtree.gif">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/vim-clap.gif">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/nerd-commenter.gif">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/tabular.gif">
-<meta property="article:published_time" content="2022-05-04T08:40:15.000Z">
-<meta property="article:modified_time" content="2022-05-04T08:41:10.219Z">
-<meta property="article:author" content="nachr">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/nerdtree.gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     
     
-      
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
+            
+                <link rel="shortcut icon" href="/images/favicon.ico">
+            
         
-      
-      
         
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
+                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
         
-      
-      
         
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
         
-      
     
     <!-- title -->
     <title>你真的会用vim吗</title>
@@ -46,123 +30,115 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/firacode/6.2.0/fira_code.min.css" rel="stylesheet">
     <!-- rss -->
     
     
-	<!-- mathjax -->
-	
-		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({
-			tex2jax: {
-			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-			  inlineMath: [['$','$']]
-			}
-		  });
-		</script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-	
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/rss2.xml" title="Nachr" type="application/rss+xml">
 </head>
 
 <body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
+
+    <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+                class="fas fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
     <span id="nav">
       <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a href="/tags/">标签</a></li><!--
-     --><!--
-       --><li><a href="/categories/">分类</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     -->
+          
+              <li><a href="/">Home</a></li>
+          
+              <li><a href="/about/">About</a></li>
+          
+              <li><a href="/archives/">Articles</a></li>
+          
+              <li><a href="/categories/">Category</a></li>
+          
+              <li><a href="/tags/">Tag</a></li>
+          
+              <li><a href="/search/">Search</a></li>
+          
       </ul>
     </span>
     <br/>
     <span id="actions">
       <ul>
-        
-        
-        <li><a class="icon" aria-label="下一篇" href="/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+          
+          
+              <li><a class="icon" href="/2022/04/30/hexo-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%8D%9A%E5%AE%A2/"><i class="fas fa-chevron-right"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-next').toggle();"
+                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
+          
+          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
+                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
+                          onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
+                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+                                        onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&text=你真的会用vim吗"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&is_video=false&description=你真的会用vim吗"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=你真的会用vim吗&body=Check out this article: https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&name=你真的会用vim吗&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&t=你真的会用vim吗"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i
+                    class="fab fa-qq " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i
+                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&text=你真的会用vim吗"><i
+                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=你真的会用vim吗&body=Check out this article: https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/"><i
+                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
 </ul>
-
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81vim-%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2、vim 开箱即用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E5%8A%A8%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 操作符和动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 命令行模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vim-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">3.</span> <span class="toc-text">3、vim 插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 主题配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-polyglot"><span class="toc-number">3.1.1.</span> <span class="toc-text">vim-polyglot</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-airline"><span class="toc-number">3.1.2.</span> <span class="toc-text">vim-airline</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-airline-themes"><span class="toc-number">3.1.3.</span> <span class="toc-text">vim-airline-themes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tabline-vim"><span class="toc-number">3.1.4.</span> <span class="toc-text">tabline.vim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8-x2F-%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 代码补全&#x2F;静态检查</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ale"><span class="toc-number">3.2.1.</span> <span class="toc-text">ale</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#coc-nvim"><span class="toc-number">3.2.2.</span> <span class="toc-text">coc.nvim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-NERD-tree"><span class="toc-number">3.3.1.</span> <span class="toc-text">The NERD tree</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-clap"><span class="toc-number">3.3.2.</span> <span class="toc-text">vim-clap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-ripgrep"><span class="toc-number">3.3.3.</span> <span class="toc-text">vim-ripgrep</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 其他插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-NERD-Commenter"><span class="toc-number">3.3.5.</span> <span class="toc-text">The NERD Commenter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tabular"><span class="toc-number">3.3.6.</span> <span class="toc-text">Tabular</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undotree-vim"><span class="toc-number">3.3.7.</span> <span class="toc-text">undotree.vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-system-copy"><span class="toc-number">3.3.8.</span> <span class="toc-text">vim-system-copy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Auto-Pairs"><span class="toc-number">3.3.9.</span> <span class="toc-text">Auto Pairs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-startify"><span class="toc-number">3.3.10.</span> <span class="toc-text">vim-startify</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81vim-%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2、vim 开箱即用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E5%8A%A8%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 操作符和动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 命令行模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vim-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">3.</span> <span class="toc-text">3、vim 插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 主题配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dracula-x2F-vim"><span class="toc-number">3.2.</span> <span class="toc-text">dracula&#x2F;vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-polyglot"><span class="toc-number">3.3.</span> <span class="toc-text">vim-polyglot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-airline"><span class="toc-number">3.4.</span> <span class="toc-text">vim-airline</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-airline-themes"><span class="toc-number">3.5.</span> <span class="toc-text">vim-airline-themes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tabline-vim"><span class="toc-number">3.6.</span> <span class="toc-text">tabline.vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8-x2F-%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5"><span class="toc-number">3.7.</span> <span class="toc-text">3.2 代码补全&#x2F;静态检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coc-nvim"><span class="toc-number">3.8.</span> <span class="toc-text">coc.nvim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ale"><span class="toc-number">3.9.</span> <span class="toc-text">ale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.10.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">3.11.</span> <span class="toc-text">3.3 文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-NERD-tree"><span class="toc-number">3.12.</span> <span class="toc-text">The NERD tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-ripgrep"><span class="toc-number">3.13.</span> <span class="toc-text">vim-ripgrep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6"><span class="toc-number">3.14.</span> <span class="toc-text">3.4 其他插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-NERD-Commenter"><span class="toc-number">3.15.</span> <span class="toc-text">The NERD Commenter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tabular"><span class="toc-number">3.16.</span> <span class="toc-text">Tabular</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undotree-vim"><span class="toc-number">3.17.</span> <span class="toc-text">undotree.vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-system-copy"><span class="toc-number">3.18.</span> <span class="toc-text">vim-system-copy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto-Pairs"><span class="toc-number">3.19.</span> <span class="toc-text">Auto Pairs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-startify"><span class="toc-number">3.20.</span> <span class="toc-text">vim-startify</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
 
+<div class="content index py4">
     
-    <div class="content index py4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
         你真的会用vim吗
     </h1>
 
-
-
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">nachr</span>
-      </span>
-      
-    <div class="postdate">
-      
-        <time datetime="2022-05-04T08:40:15.000Z" itemprop="datePublished">2022-05-04</time>
+      <div class="meta">
+        <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            
+                  nachr
+                    
+          </span>
+        </span>
         
-      
+    <div class="postdate">
+        
+            <time datetime="2022-05-04T08:40:15.000Z"
+                  itemprop="datePublished">2022-05-04</time>
+            
+        
     </div>
 
-
-      
-
-      
-
-    </div>
+          
+            
+      </div>
   </header>
   
-
-  <div class="content" itemprop="articleBody">
-    <p><a target="_blank" rel="noopener" href="https://gist.github.com/Kevinnan-teen/5babaed0c96cf782ebba8a6250a902eb">我的 vim 配置</a></p>
+    <div class="content" itemprop="articleBody">
+      <p><a target="_blank" rel="noopener" href="https://gist.github.com/Kevinnan-teen/5babaed0c96cf782ebba8a6250a902eb">我的 vim 配置</a></p>
 <h2 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h2><p>vim 是什么？是一个编辑器，是一个可以即开即用的编辑器，一个你可以通过配置客制化属于你自己的编辑器。如果你的日常工作主要和 IDE 打交道，你需要一键导入所有配置的功能、你需要一键运行工程、你需要内置的 Debug，那么 vim 不适合你。那 vscode 呢？最近几年爆火的插件式代码编辑器，即便你不安装插件，vscode 本身也提供了最够强大的功能：代码提示、代码高亮、文件搜索、字符搜索、函数跳转、丰富的快捷键 等等。它似乎如此完美，提供给你几乎所有写代码用得到的功能，而且还有丰富的插件扩展供你选择。那么，你还要用 vim 吗？默认安装的 vim 不具有以上功能，需要你通过配置 vimrc 自定义你需要的功能。</p>
 <p>我为什么用 vim？一、简单便捷，在写代码的时候，我可以只开着 terminal，一个 tab 用 vim 编辑代码，另一个 tab 用命令行编译运行。二、脱离鼠标，在你熟悉 vim 的快捷键后，几乎所有的操作（删除单词、删除一行、复制粘贴、撤销重写、多行注释、不同行&#x2F;行内定位、新建&#x2F;删除文件、文件&#x2F;关键字搜索、多窗口编辑代码）都可以只用键盘操作，而且为了保持最高的效率，如果你是 87 键键盘，你完全没必要把手移动到键盘右侧的上下左右、PAGE、HOME、END  区域，vim 用 h、j、k、l 来替代左、下、上、右。三、灵活，vim 中几乎可以自定义一切。color theme 可以随意调整，快捷键可以自己配置，按需添加插件。</p>
 <h2 id="2、vim-开箱即用"><a href="#2、vim-开箱即用" class="headerlink" title="2、vim 开箱即用"></a>2、vim 开箱即用</h2><p>约定优于配置（Convention over configuration）是软件开发中一个重要的规范。当谈到 vim 时，很多人第一反应是它拥有庞大的插件库和诸多好用的插件，但我认为这并不是应该是 vim 受开发者喜爱的真正原因。太多的 vim 新用户沉迷于插件和配置。我看过太多的博客、视频，作者推荐了一个个华而不实的插件，它对真正提高生产力没有什么帮助。那什么可以提高生产力？掌握 vim 的操作符（operaotr）和动作（motion）。深入研究 vim 的语法，可以更好地了解如何在行内移动，快速浏览大型源码、脱离鼠标编程。</p>
@@ -176,18 +152,19 @@
 <li><code>p</code>：粘贴（paste）</li>
 <li><code>&gt;</code>：增加缩进</li>
 <li><code>&lt;</code>：减少缩进</li>
-<li><code>gU</code>：</li>
+<li><code>gU</code>：单词大写</li>
+<li><code>gu</code>：单词小写</li>
 </ul>
 <p>vim 常用动作：</p>
 <ul>
 <li><code>h</code>、<code>j</code>、<code>k</code>、<code>l</code>：分别指代<code>←</code>、<code>↓</code>、<code>↑</code>、<code>→</code></li>
-<li><code>w</code>：移动到下一个单词的首部（word）</li>
+<li><code>w</code>：移动到下一个单词的首部（word）。<code>W</code>：字串。</li>
 <li><code>b</code>：移动到上一个单词的首部（back）</li>
 <li><code>0</code>：移动到行首</li>
 <li><code>$</code>：移动到行位</li>
 <li><code>gg</code>：移动到第一行</li>
 <li><code>G</code>：移动到最后一行</li>
-<li><code>f</code>：移动到光标右边的指定字符（如<code>fx</code>会移动到光标右边第一个<code>x</code>字符）</li>
+<li><code>f</code>：移动到光标右边的指定字符（如<code>fx</code>会移动到光标右边第一个<code>x</code>字符）。<code>;</code>命令会重复上次执行过的<code>f&#123;char&#125;</code>命令，避免重复输入<code>f&#123;char&#125;</code>命令。同时如果不小心跳过头了，可以用<code>,</code>命令再跳回去。<code>F&#123;char&#125;</code>反向移动到上一个<code>&#123;char&#125;</code>所在之处。<code>t&#123;char&#125;</code>正向移动到下一个<code>&#123;char&#125;</code>所在之处的前一个字符。</li>
 <li><code>/</code>：文件内搜索</li>
 </ul>
 <p>vim 的操作符合动作命令结合形成一种语法：一个操作由操作符后跟一个动作命令组成。比如：</p>
@@ -212,6 +189,8 @@
 <p>更多命令：</p>
 <ul>
 <li><code>daw</code>：之前用<code>dw</code>删除单词只能是当前光标位于单词首部才能整个单词，当光标位于单词中间时可以用<code>daw</code>进行删除</li>
+<li><code>f&#123;char1&#125;dt&#123;char2&#125;</code>：跳转到<code>&#123;char1&#125;</code>字符位置，删除<code>&#123;char1&#125;</code>字符到<code>&#123;char2&#125;</code>之间的内容。删除范围：<code>[char1, char2)</code>。</li>
+<li><code>Ctrl-[</code>：与<code>ESC</code>效果相同，返回 NORMAL 模式。</li>
 </ul>
 <p>以上的所有命令都是在普通（NORMAL）模式下的操作，而且操作也远远不止上面提到的这些。推荐阅读<a target="_blank" rel="noopener" href="https://book.douban.com/subject/26967597/">《Vim实用技巧》第二版</a>。</p>
 <h3 id="2-2-命令行模式"><a href="#2-2-命令行模式" class="headerlink" title="2.2 命令行模式"></a>2.2 命令行模式</h3><p>在按下<code>:</code>键时，vim 会切换到命令行模式；按下<code>Esc</code>退出命令行模式进入 NORMAL 模式。</p>
@@ -252,21 +231,16 @@
 
 <p>卸载插件：<code>:PlugClean</code></p>
 <p>vim 插件管理中心：<a target="_blank" rel="noopener" href="https://vimawesome.com/">VimAwesome</a>。</p>
-<h3 id="3-1-主题配置"><a href="#3-1-主题配置" class="headerlink" title="3.1 主题配置"></a>3.1 主题配置</h3><p><a target="_blank" rel="noopener" href="https://github.com/dracula/vim">dracula&#x2F;vim</a></p>
-<p>vim 黑色主题</p>
-<h4 id="vim-polyglot"><a href="#vim-polyglot" class="headerlink" title="vim-polyglot"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-polyglot">vim-polyglot</a></h4><p>vim 不同语言语法高亮</p>
-<h4 id="vim-airline"><a href="#vim-airline" class="headerlink" title="vim-airline"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-airline-superman">vim-airline</a></h4><p>vim 底部状态栏美化</p>
+<h3 id="3-1-主题配置"><a href="#3-1-主题配置" class="headerlink" title="3.1 主题配置"></a>3.1 主题配置</h3><h3 id="dracula-x2F-vim"><a href="#dracula-x2F-vim" class="headerlink" title="dracula&#x2F;vim"></a><a target="_blank" rel="noopener" href="https://github.com/dracula/vim">dracula&#x2F;vim</a></h3><p>vim 黑色主题</p>
+<h3 id="vim-polyglot"><a href="#vim-polyglot" class="headerlink" title="vim-polyglot"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-polyglot">vim-polyglot</a></h3><p>vim 不同语言语法高亮</p>
+<h3 id="vim-airline"><a href="#vim-airline" class="headerlink" title="vim-airline"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-airline-superman">vim-airline</a></h3><p>vim 底部状态栏美化</p>
 <p>插件配置：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">“如果要用其他插件优化标签页显示，去除下面一行</span><br><span class="line">let g:airline<span class="params">#</span>extensions<span class="params">#</span>tabline<span class="params">#</span>enabled = 1</span><br><span class="line">let g:airline<span class="built_in">_</span>theme=&#x27;bubblegum&#x27;</span><br></pre></td></tr></table></figure>
 
-<h4 id="vim-airline-themes"><a href="#vim-airline-themes" class="headerlink" title="vim-airline-themes"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-airline-themes">vim-airline-themes</a></h4><p>扩展 vim-airline 主题</p>
-<h4 id="tabline-vim"><a href="#tabline-vim" class="headerlink" title="tabline.vim"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/tabline-vim">tabline.vim</a></h4><p>vim 标签页优化（去除文件路径，只显示文件名）</p>
+<h3 id="vim-airline-themes"><a href="#vim-airline-themes" class="headerlink" title="vim-airline-themes"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-airline-themes">vim-airline-themes</a></h3><p>扩展 vim-airline 主题</p>
+<h3 id="tabline-vim"><a href="#tabline-vim" class="headerlink" title="tabline.vim"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/tabline-vim">tabline.vim</a></h3><p>vim 标签页优化（去除文件路径，只显示文件名）</p>
 <p>插件配置：需要去除 vim-airline 的 let g:airline#extensions#tabline#enabled &#x3D; 1 配置才能生效</p>
-<h3 id="3-2-代码补全-x2F-静态检查"><a href="#3-2-代码补全-x2F-静态检查" class="headerlink" title="3.2 代码补全&#x2F;静态检查"></a>3.2 代码补全&#x2F;静态检查</h3><h4 id="ale"><a href="#ale" class="headerlink" title="ale"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/ale-be-who-we-are">ale</a></h4><p>语法检查</p>
-<p>插件配置：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;dense-analysis/ale</span><br><span class="line">let g:ale<span class="built_in">_</span>sign<span class="built_in">_</span>column<span class="built_in">_</span>always = 1                    &quot;符号槽始终开启</span><br><span class="line">let g:ale<span class="built_in">_</span>set<span class="built_in">_</span>highlights = 0                        &quot;禁用高亮显示。</span><br><span class="line">let g:ale<span class="built_in">_</span>sign<span class="built_in">_</span>error = &#x27;✘&#x27;                          &quot;错误提示符。</span><br><span class="line">let g:ale<span class="built_in">_</span>sign<span class="built_in">_</span>warning = &#x27;!&#x27;                        &quot;警告提示符。</span><br><span class="line">let g:ale<span class="built_in">_</span>echo<span class="built_in">_</span>msg<span class="built_in">_</span>error<span class="built_in">_</span>str = &#x27;E&#x27;                  &quot;错误提示符。</span><br><span class="line">let g:ale<span class="built_in">_</span>echo<span class="built_in">_</span>msg<span class="built_in">_</span>warning<span class="built_in">_</span>str = &#x27;W&#x27;                &quot;警告提示符。</span><br><span class="line">let g:airline<span class="params">#</span>extensions<span class="params">#</span>ale<span class="params">#</span>enable = 1             &quot;将ale信息在airline中显示</span><br></pre></td></tr></table></figure>
-
-<h4 id="coc-nvim"><a href="#coc-nvim" class="headerlink" title="coc.nvim"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/coc-nvim">coc.nvim</a></h4><p>LSP 代码补全</p>
+<h3 id="3-2-代码补全-x2F-静态检查"><a href="#3-2-代码补全-x2F-静态检查" class="headerlink" title="3.2 代码补全&#x2F;静态检查"></a>3.2 代码补全&#x2F;静态检查</h3><h3 id="coc-nvim"><a href="#coc-nvim" class="headerlink" title="coc.nvim"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/coc-nvim">coc.nvim</a></h3><p>LSP 代码补全</p>
 <p>CocConfig 配置：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;diagnostic.enable&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;languageserver&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;ccls&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ccls&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;filetypes&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;c&quot;</span><span class="punctuation">,</span> <span class="string">&quot;cc&quot;</span><span class="punctuation">,</span> <span class="string">&quot;cpp&quot;</span><span class="punctuation">,</span> <span class="string">&quot;c++&quot;</span><span class="punctuation">,</span> <span class="string">&quot;cuda&quot;</span><span class="punctuation">,</span> <span class="string">&quot;objc&quot;</span><span class="punctuation">,</span> <span class="string">&quot;objcpp&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;rootPatterns&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;.ccls-root&quot;</span><span class="punctuation">,</span> <span class="string">&quot;compile_commands.json&quot;</span><span class="punctuation">,</span> <span class="string">&quot;.git/&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;initializationOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">     <span class="attr">&quot;cache&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">       <span class="attr">&quot;directory&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/tmp/ccls-cache&quot;</span></span><br><span class="line">     <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;client&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">       <span class="attr">&quot;snippetSupport&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line">     <span class="punctuation">&#125;</span></span><br><span class="line">   <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -278,7 +252,11 @@
 <li><code>Ctrl-o</code>：搜索返回</li>
 <li><code>K</code>：显示定义，（<code>K</code>&#x3D;&#x3D;<code>shift-k</code>）</li>
 </ul>
-<h3 id="3-3-文件操作"><a href="#3-3-文件操作" class="headerlink" title="3.3 文件操作"></a>3.3 文件操作</h3><h4 id="The-NERD-tree"><a href="#The-NERD-tree" class="headerlink" title="The NERD tree"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/nerdtree-red">The NERD tree</a></h4><p>开启左侧目录树</p>
+<h3 id="ale"><a href="#ale" class="headerlink" title="ale"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/ale-be-who-we-are">ale</a></h3><p>语法检查</p>
+<p>插件配置：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;dense-analysis/ale</span><br><span class="line">let g:ale<span class="built_in">_</span>sign<span class="built_in">_</span>column<span class="built_in">_</span>always = 1                    &quot;符号槽始终开启</span><br><span class="line">let g:ale<span class="built_in">_</span>set<span class="built_in">_</span>highlights = 0                        &quot;禁用高亮显示。</span><br><span class="line">let g:ale<span class="built_in">_</span>sign<span class="built_in">_</span>error = &#x27;✘&#x27;                          &quot;错误提示符。</span><br><span class="line">let g:ale<span class="built_in">_</span>sign<span class="built_in">_</span>warning = &#x27;!&#x27;                        &quot;警告提示符。</span><br><span class="line">let g:ale<span class="built_in">_</span>echo<span class="built_in">_</span>msg<span class="built_in">_</span>error<span class="built_in">_</span>str = &#x27;E&#x27;                  &quot;错误提示符。</span><br><span class="line">let g:ale<span class="built_in">_</span>echo<span class="built_in">_</span>msg<span class="built_in">_</span>warning<span class="built_in">_</span>str = &#x27;W&#x27;                &quot;警告提示符。</span><br><span class="line">let g:airline<span class="params">#</span>extensions<span class="params">#</span>ale<span class="params">#</span>enable = 1             &quot;将ale信息在airline中显示</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="3-3-文件操作"><a href="#3-3-文件操作" class="headerlink" title="3.3 文件操作"></a>3.3 文件操作</h3><h3 id="The-NERD-tree"><a href="#The-NERD-tree" class="headerlink" title="The NERD tree"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/nerdtree-red">The NERD tree</a></h3><p>开启左侧目录树</p>
 <p>插件配置：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;修改默认快捷键Ctrl+e</span><br><span class="line">nnoremap &lt;C-e&gt; :NERDTreeToggle&lt;CR&gt;</span><br></pre></td></tr></table></figure>
 
@@ -289,7 +267,8 @@
 <li><code>ma</code>：新建文件&#x2F;文件夹</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/nerdtree.gif"></p>
-<h4 id="vim-clap"><a href="#vim-clap" class="headerlink" title="vim-clap"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-clap">vim-clap</a></h4><p>文件搜索</p>
+<p><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-clap">vim-clap</a></p>
+<p>文件搜索</p>
 <p>命令：</p>
 <ul>
 <li><code>:Clap filer</code>：找到文件，<code>enter</code>打开并覆盖当前文件vim</li>
@@ -297,13 +276,13 @@
 <li><code>Ctrl-j</code>、<code>Ctrl-k</code>：下、上选择文件</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/vim-clap.gif"></p>
-<h4 id="vim-ripgrep"><a href="#vim-ripgrep" class="headerlink" title="vim-ripgrep"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-ripgrep">vim-ripgrep</a></h4><p>多文件关键词搜索</p>
+<h3 id="vim-ripgrep"><a href="#vim-ripgrep" class="headerlink" title="vim-ripgrep"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-ripgrep">vim-ripgrep</a></h3><p>多文件关键词搜索</p>
 <p>命令：</p>
 <ul>
 <li><code>:Rg &lt;string|pattern&gt;</code></li>
 <li><code>Ctrl+ww</code>：切换窗口</li>
 </ul>
-<h4 id="3-4-其他插件"><a href="#3-4-其他插件" class="headerlink" title="3.4 其他插件"></a>3.4 其他插件</h4><h4 id="The-NERD-Commenter"><a href="#The-NERD-Commenter" class="headerlink" title="The NERD Commenter"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/the-nerd-commenter">The NERD Commenter</a></h4><p>代码注释</p>
+<h3 id="3-4-其他插件"><a href="#3-4-其他插件" class="headerlink" title="3.4 其他插件"></a>3.4 其他插件</h3><h3 id="The-NERD-Commenter"><a href="#The-NERD-Commenter" class="headerlink" title="The NERD Commenter"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/the-nerd-commenter">The NERD Commenter</a></h3><p>代码注释</p>
 <p>命令：</p>
 <ul>
 <li><code>,cc</code>：注释当前行</li>
@@ -311,7 +290,7 @@
 <li><code>n,cc</code>：多行注释</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/nerd-commenter.gif"></p>
-<h4 id="Tabular"><a href="#Tabular" class="headerlink" title="Tabular"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/tabular">Tabular</a></h4><p>对齐co</p>
+<h3 id="Tabular"><a href="#Tabular" class="headerlink" title="Tabular"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/tabular">Tabular</a></h3><p>对齐co</p>
 <p>插件配置：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nmap &lt;Leader&gt;t= :Tabularize /=&lt;CR&gt;</span><br><span class="line">vmap &lt;Leader&gt;t= :Tabularize /=&lt;CR&gt;</span><br><span class="line">nmap &lt;Leader&gt;t: :Tabularize /:<span class="keyword">\zs</span>&lt;CR&gt;</span><br><span class="line">vmap &lt;Leader&gt;t: :Tabularize /:<span class="keyword">\zs</span>&lt;CR&gt;</span><br></pre></td></tr></table></figure>
 
@@ -321,12 +300,12 @@
 <li><code>,t:</code>：对齐冒号</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/Kevinnan-teen/CDN/tabular.gif"></p>
-<h4 id="undotree-vim"><a href="#undotree-vim" class="headerlink" title="undotree.vim"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/undotree-vim">undotree.vim</a></h4><p>可视化撤销历史修改</p>
+<h3 id="undotree-vim"><a href="#undotree-vim" class="headerlink" title="undotree.vim"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/undotree-vim">undotree.vim</a></h3><p>可视化撤销历史修改</p>
 <p>命令：</p>
 <ul>
 <li><code>,u</code>：列出历史修改</li>
 </ul>
-<h4 id="vim-system-copy"><a href="#vim-system-copy" class="headerlink" title="vim-system-copy"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-system-copy">vim-system-copy</a></h4><p>系统粘贴板</p>
+<h3 id="vim-system-copy"><a href="#vim-system-copy" class="headerlink" title="vim-system-copy"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-system-copy">vim-system-copy</a></h3><p>系统粘贴板</p>
 <p>命令：</p>
 <ul>
 <li><code>cpiw</code>：复制单词到系统粘贴板</li>
@@ -335,197 +314,322 @@
 <li><code>cP</code>：复制一行到系统粘贴板</li>
 <li><code>cV</code>：从系统粘贴板粘贴一行</li>
 </ul>
-<h4 id="Auto-Pairs"><a href="#Auto-Pairs" class="headerlink" title="Auto Pairs"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/auto-pairs">Auto Pairs</a></h4><p>成对插入或删除括号、引号</p>
-<h4 id="vim-startify"><a href="#vim-startify" class="headerlink" title="vim-startify"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-startify">vim-startify</a></h4><p>终端输入 vim，可以打开历史文件</p>
+<h3 id="Auto-Pairs"><a href="#Auto-Pairs" class="headerlink" title="Auto Pairs"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/auto-pairs">Auto Pairs</a></h3><p>成对插入或删除括号、引号</p>
+<h3 id="vim-startify"><a href="#vim-startify" class="headerlink" title="vim-startify"></a><a target="_blank" rel="noopener" href="https://vimawesome.com/plugin/vim-startify">vim-startify</a></h3><p>终端输入 vim，可以打开历史文件</p>
 
-  </div>
+    </div>
 </article>
 
-
-    <div class="blog-post-comments">
-        <div id="utterances_thread">
-            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
-        </div>
-    </div>
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">首页</a></li>
-         
-          <li><a href="/about/">关于</a></li>
-         
-          <li><a href="/archives/">归档</a></li>
-         
-          <li><a href="/tags/">标签</a></li>
-         
-          <li><a href="/categories/">分类</a></li>
-         
-          <li><a href="/search/">搜索</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81vim-%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2、vim 开箱即用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E5%8A%A8%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 操作符和动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 命令行模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vim-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">3.</span> <span class="toc-text">3、vim 插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 主题配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-polyglot"><span class="toc-number">3.1.1.</span> <span class="toc-text">vim-polyglot</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-airline"><span class="toc-number">3.1.2.</span> <span class="toc-text">vim-airline</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-airline-themes"><span class="toc-number">3.1.3.</span> <span class="toc-text">vim-airline-themes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tabline-vim"><span class="toc-number">3.1.4.</span> <span class="toc-text">tabline.vim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8-x2F-%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 代码补全&#x2F;静态检查</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ale"><span class="toc-number">3.2.1.</span> <span class="toc-text">ale</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#coc-nvim"><span class="toc-number">3.2.2.</span> <span class="toc-text">coc.nvim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-NERD-tree"><span class="toc-number">3.3.1.</span> <span class="toc-text">The NERD tree</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-clap"><span class="toc-number">3.3.2.</span> <span class="toc-text">vim-clap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-ripgrep"><span class="toc-number">3.3.3.</span> <span class="toc-text">vim-ripgrep</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 其他插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-NERD-Commenter"><span class="toc-number">3.3.5.</span> <span class="toc-text">The NERD Commenter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tabular"><span class="toc-number">3.3.6.</span> <span class="toc-text">Tabular</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undotree-vim"><span class="toc-number">3.3.7.</span> <span class="toc-text">undotree.vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-system-copy"><span class="toc-number">3.3.8.</span> <span class="toc-text">vim-system-copy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Auto-Pairs"><span class="toc-number">3.3.9.</span> <span class="toc-text">Auto Pairs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-startify"><span class="toc-number">3.3.10.</span> <span class="toc-text">vim-startify</span></a></li></ol></li></ol></li></ol>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&text=你真的会用vim吗"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&is_video=false&description=你真的会用vim吗"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=你真的会用vim吗&body=Check out this article: https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&name=你真的会用vim吗&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&t=你真的会用vim吗"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
-    </div>
-
-  </div>
+<div class="blog-post-comments">
+  <section id="comment">
+    <div id="valine_container" class="valine_thread"></div>
+  </section>
+  <script src="https://unpkg.com/leancloud-storage@4.12.0/dist/av-min.js"></script>
+  <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+  <script>
+    var GUEST_INFO = ["nick", "mail", "link"];
+    var guest_info = "nick,mail"
+      .split(",")
+      .filter(function (item) {
+        return GUEST_INFO.indexOf(item) > -1;
+      });
+    var valine = new Valine();
+    valine.init({
+      el: "#valine_container",
+      appId: "YDcjROspulXWg2sr909rDSaM-gzGzoHsz",
+      appKey: "tUTnDRbNf3sAhr4iw9BVOhiQ",
+      placeholder: "如果你遇到任何问题，可以在评论区留言，我会尽快回复。另外，也请你抽时间关注自己留言下的解答。",
+      pageSize: "10",
+      avatar: "mp",
+      lang: "en",
+      emojiCDN: "https://mirrorcdn.bili33.top/",
+      // 表情title和图片映射
+      emojiMaps: {
+        Tieba2: "Tieba/i_f01.png",
+        Tieba3: "Tieba/i_f02.png",
+        Tieba4: "Tieba/i_f03.png",
+        Tieba5: "Tieba/i_f04.png",
+        Tieba6: "Tieba/i_f05.png",
+        Tieba7: "Tieba/i_f06.png",
+        Tieba8: "Tieba/i_f07.png",
+        Tieba9: "Tieba/i_f08.png",
+        Tieba10: "Tieba/i_f09.png",
+        Tieba11: "Tieba/i_f10.png",
+        Tieba12: "Tieba/i_f11.png",
+        Tieba13: "Tieba/i_f12.png",
+        Tieba14: "Tieba/i_f13.png",
+        Tieba15: "Tieba/i_f14.png",
+        Tieba16: "Tieba/i_f15.png",
+        Tieba17: "Tieba/i_f16.png",
+        Tieba18: "Tieba/i_f17.png",
+        Tieba19: "Tieba/i_f18.png",
+        Tieba20: "Tieba/i_f19.png",
+        Tieba21: "Tieba/i_f20.png",
+        Tieba22: "Tieba/i_f21.png",
+        Tieba23: "Tieba/i_f22.png",
+        Tieba24: "Tieba/i_f23.png",
+        Tieba25: "Tieba/i_f24.png",
+        Tieba26: "Tieba/i_f25.png",
+        Tieba27: "Tieba/i_f26.png",
+        Tieba28: "Tieba/i_f27.png",
+        Tieba29: "Tieba/i_f28.png",
+        Tieba30: "Tieba/i_f29.png",
+        Tieba31: "Tieba/i_f30.png",
+        Tieba32: "Tieba/i_f31.png",
+        Tieba33: "Tieba/i_f32.png",
+        Tieba34: "Tieba/i_f33.png",
+        bilibilitv2: "bilibilitv/[tv_doge].png",
+        bilibilitv3: "bilibilitv/[tv_亲亲].png",
+        bilibilitv4: "bilibilitv/[tv_偷笑].png",
+        bilibilitv5: "bilibilitv/[tv_再见].png",
+        bilibilitv6: "bilibilitv/[tv_冷漠].png",
+        bilibilitv7: "bilibilitv/[tv_发怒].png",
+        bilibilitv8: "bilibilitv/[tv_发财].png",
+        bilibilitv9: "bilibilitv/[tv_可爱].png",
+        bilibilitv10: "bilibilitv/[tv_吐血].png",
+        bilibilitv11: "bilibilitv/[tv_呆].png",
+        bilibilitv12: "bilibilitv/[tv_呕吐].png",
+        bilibilitv13: "bilibilitv/[tv_困].png",
+        bilibilitv14: "bilibilitv/[tv_坏笑].png",
+        bilibilitv15: "bilibilitv/[tv_大佬].png",
+        bilibilitv16: "bilibilitv/[tv_大哭].png",
+        bilibilitv17: "bilibilitv/[tv_委屈].png",
+        bilibilitv18: "bilibilitv/[tv_害羞].png",
+        bilibilitv19: "bilibilitv/[tv_尴尬].png",
+        bilibilitv20: "bilibilitv/[tv_微笑].png",
+        bilibilitv21: "bilibilitv/[tv_思考].png",
+        bilibilitv22: "bilibilitv/[tv_惊吓].png",
+        bilibilitv23: "bilibilitv/[tv_打脸].png",
+        bilibilitv24: "bilibilitv/[tv_抓狂].png",
+        bilibilitv25: "bilibilitv/[tv_抠鼻].png",
+        bilibilitv26: "bilibilitv/[tv_斜眼笑].png",
+        bilibilitv27: "bilibilitv/[tv_无奈].png",
+        bilibilitv28: "bilibilitv/[tv_晕].png",
+        bilibilitv29: "bilibilitv/[tv_流汗].png",
+        bilibilitv30: "bilibilitv/[tv_流泪].png",
+        bilibilitv31: "bilibilitv/[tv_流鼻血].png",
+        bilibilitv32: "bilibilitv/[tv_点赞].png",
+        bilibilitv33: "bilibilitv/[tv_生气].png",
+        bilibilitv34: "bilibilitv/[tv_生病].png",
+        bilibilitv35: "bilibilitv/[tv_疑问].png",
+        bilibilitv36: "bilibilitv/[tv_白眼].png",
+        bilibilitv37: "bilibilitv/[tv_皱眉].png",
+        bilibilitv38: "bilibilitv/[tv_目瞪口呆].png",
+        bilibilitv39: "bilibilitv/[tv_睡着].png",
+        bilibilitv40: "bilibilitv/[tv_笑哭].png",
+        bilibilitv41: "bilibilitv/[tv_腼腆].png",
+        bilibilitv42: "bilibilitv/[tv_色].png",
+        bilibilitv43: "bilibilitv/[tv_调侃].png",
+        bilibilitv44: "bilibilitv/[tv_调皮].png",
+        bilibilitv45: "bilibilitv/[tv_鄙视].png",
+        bilibilitv46: "bilibilitv/[tv_闭嘴].png",
+        bilibilitv47: "bilibilitv/[tv_难过].png",
+        bilibilitv48: "bilibilitv/[tv_馋].png",
+        bilibilitv49: "bilibilitv/[tv_鬼脸].png",
+        bilibilitv50: "bilibilitv/[tv_黑人问号].png",
+        bilibilitv51: "bilibilitv/[tv_鼓掌].png",
+        bilibili22332: "bilibili2233/[2233娘_卖萌].png",
+        bilibili22333: "bilibili2233/[2233娘_吃惊].png",
+        bilibili22334: "bilibili2233/[2233娘_吐魂].png",
+        bilibili22335: "bilibili2233/[2233娘_喝水].png",
+        bilibili22336: "bilibili2233/[2233娘_困惑].png",
+        bilibili22337: "bilibili2233/[2233娘_大哭].png",
+        bilibili22338: "bilibili2233/[2233娘_大笑].png",
+        bilibili22339: "bilibili2233/[2233娘_委屈].png",
+        bilibili223310: "bilibili2233/[2233娘_怒].png",
+        bilibili223311: "bilibili2233/[2233娘_无言].png",
+        bilibili223312: "bilibili2233/[2233娘_汗].png",
+        bilibili223313: "bilibili2233/[2233娘_疑问].png",
+        bilibili223314: "bilibili2233/[2233娘_第一].png",
+        bilibili223315: "bilibili2233/[2233娘_耶].png",
+        bilibili223316: "bilibili2233/[2233娘_郁闷].png",
+      },
+    });
+  </script>
 </div>
 
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
+
+
+  <script>
+    //检测推送
+    var pushType = "";
+    var pushLink = "";
+    var siteName = "Nachr";
+
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    //分情况推送
+    if (pushType === "cp") {
+      var title = siteName + "上又有新评论啦~!\n";
+      function send_valine_CoolPush() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var data =
+          "昵称: " +
+          vnick +
+          "\n\n邮箱: " +
+          vmail +
+          "\n\n网站地址: " +
+          vlink +
+          "\n\n当前页面: " +
+          pagename +
+          "\n\n评论内容: " +
+          veditor +
+          "\n\n跳转链接: " +
+          pageurl +
+          "\n\n评论时间: " +
+          ptime.toLocaleString();
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/json"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        var payload = { "t": title, "c": data }
+        httpRequest.send(JSON.stringify(payload)); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_CoolPush;
+    }
+  </script>
     
+        <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li><a href="/">Home</a></li>
+                
+                    <li><a href="/about/">About</a></li>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/">Category</a></li>
+                
+                    <li><a href="/tags/">Tag</a></li>
+                
+                    <li><a href="/search/">Search</a></li>
+                
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81vim-%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2、vim 开箱即用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E5%8A%A8%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 操作符和动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 命令行模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vim-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">3.</span> <span class="toc-text">3、vim 插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 主题配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dracula-x2F-vim"><span class="toc-number">3.2.</span> <span class="toc-text">dracula&#x2F;vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-polyglot"><span class="toc-number">3.3.</span> <span class="toc-text">vim-polyglot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-airline"><span class="toc-number">3.4.</span> <span class="toc-text">vim-airline</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-airline-themes"><span class="toc-number">3.5.</span> <span class="toc-text">vim-airline-themes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tabline-vim"><span class="toc-number">3.6.</span> <span class="toc-text">tabline.vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8-x2F-%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5"><span class="toc-number">3.7.</span> <span class="toc-text">3.2 代码补全&#x2F;静态检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coc-nvim"><span class="toc-number">3.8.</span> <span class="toc-text">coc.nvim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ale"><span class="toc-number">3.9.</span> <span class="toc-text">ale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.10.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">3.11.</span> <span class="toc-text">3.3 文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-NERD-tree"><span class="toc-number">3.12.</span> <span class="toc-text">The NERD tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-ripgrep"><span class="toc-number">3.13.</span> <span class="toc-text">vim-ripgrep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6"><span class="toc-number">3.14.</span> <span class="toc-text">3.4 其他插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-NERD-Commenter"><span class="toc-number">3.15.</span> <span class="toc-text">The NERD Commenter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tabular"><span class="toc-number">3.16.</span> <span class="toc-text">Tabular</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undotree-vim"><span class="toc-number">3.17.</span> <span class="toc-text">undotree.vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-system-copy"><span class="toc-number">3.18.</span> <span class="toc-text">vim-system-copy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto-Pairs"><span class="toc-number">3.19.</span> <span class="toc-text">Auto Pairs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-startify"><span class="toc-number">3.20.</span> <span class="toc-text">vim-startify</span></a></li></ol></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i
+                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&title=你真的会用vim吗"><i
+                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/&text=你真的会用vim吗"><i
+                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=你真的会用vim吗&body=Check out this article: https://www.nachr.top/2022/05/04/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8vim%E5%90%97/"><i
+                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+        </div>
+
+        <div id="actions-footer">
+            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
+                        class="fas fa-bars fa-lg"
+                        aria-hidden="true"></i> Menu</a>
+            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
+                        class="fas fa-list fa-lg"
+                        aria-hidden="true"></i> TOC</a>
+            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
+                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+            <a id="top" style="display:none" class="icon" href="#"
+               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
+                                                                               aria-hidden="true"></i> Top
+            </a>
+        </div>
+
+    </div>
+</div>
     
-    2022
-    nachr
+    <footer id="footer">
+  <div class="footer-top">
+    &copy; 2022 <i class="fas fa-heart"></i>
+    nachr 
+    <a href="https://beian.miit.gov.cn/" target="_blank">陇ICP备20000414号-2</a>
+    
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a href="/tags/">标签</a></li><!--
-     --><!--
-       --><li><a href="/categories/">分类</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     -->
-      </ul>
-    </nav>
+
+  <div class="footer-bottom">
+    
+    <!-- tongji -->
+    <script
+      async
+      src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+    ></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问总量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+    <br />
+     
   </div>
 </footer>
 
-    </div>
-    <!-- styles -->
+</div>
+<!-- styles -->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.0.0/css/all.min.css">
 
 
+<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 
-  <link rel="preload" as="style" href="https://cdn.staticfile.org/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+<!-- jquery -->
 
-
-    <!-- jquery -->
- 
-  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
 
 
-
+<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
 
 <!-- clipboard -->
 
-  
-    <script src="https://cdn.staticfile.org/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
-  
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
-    btn += '<i class="far fa-clone"></i>';
-    btn += '</span>'; 
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "复制成功!");
-      e.clearSelection();
-    })
-  })
-  </script>
+    
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "Copied!");
+                e.clearSelection();
+            })
+        })
+    </script>
 
 
 <script src="/js/main.js"></script>
 
 <!-- search -->
 
-<!-- Google Analytics -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DTP9827P5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9DTP9827P5');
-    </script>
-
-<!-- Baidu Analytics -->
-
-  <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?4feff4185e41840b91ea6c35601b40c8";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-
-<!-- Cloudflare Analytics -->
-
-<!-- Umami Analytics -->
-
-<!-- Disqus Comments -->
-
-<!-- utterances Comments -->
-
-    <script type="text/javascript">
-      var utterances_repo = 'Kevinnan-teen/Kevinnan-teen.github.io';
-      var utterances_issue_term = 'https://github.com/Kevinnan-teen/Kevinnan-teen.github.io/issues';
-      var utterances_label = 'Comment';
-      var utterances_theme = 'github-dark';
-
-      (function(){
-          var script = document.createElement('script');
-
-          script.src = 'https://utteranc.es/client.js';
-          script.setAttribute('repo', utterances_repo);
-          script.setAttribute('issue-term', 'pathname');
-          script.setAttribute('label', utterances_label);
-          script.setAttribute('theme', utterances_theme);
-          script.setAttribute('crossorigin', 'anonymous');
-          script.async = true;
-          (document.getElementById('utterances_thread')).appendChild(script);
-      }());
-  </script>
-
 </body>
+
 </html>
